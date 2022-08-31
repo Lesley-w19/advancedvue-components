@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="hooks-wrapper">
     <h3>Hooks implementation</h3>
     <div ref="created-example">{{ showinfoComputed }}</div>
-    <button ref="button-updat-element">{{ total }}</button>
+    <button class="btn btn-warning py-1 px-5" ref="button-updat-element">{{ total }}</button>
   </div>
 </template>
 

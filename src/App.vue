@@ -1,10 +1,23 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <button @click="goToPage('/')">Go to Home</button>
-    <button @click="goToPage('/about')">Go to About</button>
-    <button @click="goToPage('/hooks')">Go to Hooks</button>
-    <button @click="goToPage('/example')">Go to Example</button>
+
+    <div class="nav-wrapper bg-primary">
+      <ul class="mr-auto">
+        <li class="active">
+          <a class="" href="#" @click="goToPage('/')">Home</a>
+        </li>
+        <li class="">
+          <a class="" href="#" @click="goToPage('/about')">About</a>
+        </li>
+        <li class="">
+          <a class="" href="#" @click="goToPage('/hooks')">Hooks</a>
+        </li>
+        <li class="">
+          <a class="" href="#" @click="goToPage('/example')">Contact</a>
+        </li>
+      </ul>
+    </div>
 
     <app-router></app-router>
   </div>
@@ -35,13 +48,6 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "./assets/styles.scss";
 </style>

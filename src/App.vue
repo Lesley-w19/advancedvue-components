@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <button @click="goToPage('/about')">Go to About</button>
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <button @click="goToPage('/')">Go to Home</button>
+    <button @click="goToPage('/about')">Go to About</button>
+    <button @click="goToPage('/hooks')">Go to Hooks</button>
+    <button @click="goToPage('/example')">Go to Example</button>
+
     <app-router></app-router>
   </div>
 </template>
@@ -24,11 +27,11 @@ export default {
       window.location = route;
     },
   },
-  provide: function(){
+  provide: function () {
     return {
-      getImages: this.imgs
-    }
-  }
+      getImages: this.imgs,
+    };
+  },
 };
 </script>
 

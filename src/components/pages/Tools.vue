@@ -1,15 +1,19 @@
 <template>
   <div>
-    <button @click="showList()">
+    <h6 @click="showList()" class="m-3">
       {{ title }}
-    </button>
+    </h6>
 
-    <div class="logo-wrap" v-for="(logo, index) in getImages" v-bind:key="index">
+    <div
+      class="logo-wrapper"
+      v-for="(logo, index) in getImages"
+      v-bind:key="index"
+    >
       <img :src="logo" :alt="index" />
     </div>
 
     <div v-for="(l, index) in list" v-bind:key="index">
-      <ul ref = "toolList">
+      <ul ref="toolList">
         <li>{{ l }}</li>
       </ul>
     </div>
@@ -32,7 +36,10 @@ export default {
       console.log(this.$root.list);
     },
   },
-  inject: ['getImages'],
+  inject: ["getImages"],
 };
 </script>
-c
+
+<style lang="scss">
+@import "../../assets/styles.scss";
+</style>

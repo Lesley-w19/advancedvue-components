@@ -1,5 +1,5 @@
 <template>
-  <div claas="about-wrapper">
+  <div claas="about-wrapper px-5 w-75 mx-auto">
     <h3>About Page</h3>
 
     <div class="logos-wrapper">
@@ -9,7 +9,6 @@
         </button>
         <div class="img-logo" v-if="display">
           <Tools ref="toollist" />
-        
         </div>
       </div>
     </div>
@@ -21,9 +20,9 @@ export default {
   name: "AboutPage",
   data() {
     return {
-      display: false,
+      display: this.$parent.display,
       sections: ["home", "about", "contact", "blogs"],
-      toolList: this.$ref.toolList,
+      // toolList: this.$ref.toolList,
     };
   },
   components: {
@@ -31,4 +30,6 @@ export default {
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+@import "../../assets/styles.scss";
+</style>

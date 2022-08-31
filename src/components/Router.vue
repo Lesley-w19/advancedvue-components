@@ -1,5 +1,7 @@
 <template>
-  <component :is="routedComponent"></component>
+  <keep-alive>
+    <component :is="routedComponent"></component>
+  </keep-alive>
 </template>
 
 <script>
@@ -12,7 +14,7 @@ const routes = {
   "/": HomePage,
   "/about": AboutPage,
   "/hooks": HooksPage,
-  "/example": ExampleHk
+  "/example": ExampleHk,
 };
 
 export default {

@@ -13,9 +13,9 @@
         <li class="">
           <a class="" href="#" @click="goToPage('/hooks')">Hooks</a>
         </li>
-        <li class="">
+        <!-- <li class="">
           <a class="" href="#" @click="goToPage('/example')">Example</a>
-        </li>
+        </li> -->
         <li class="">
           <a class="" href="#" @click="goToPage('/contact')">Contact</a>
         </li>

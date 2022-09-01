@@ -21,13 +21,14 @@ a {
   justify-content: $justifyContent;
   flex-direction: $direction;
 }
-@mixin image {
-  width: 100%;
-  height: 200px;
+@mixin image($width, $height) {
+  width: $width;
+  height: $height;
 }
 
 .hero-wrapper {
-  background: url("https://images.pexels.com/photos/3608056/pexels-photo-3608056.jpeg");
+  background: url("https://images.pexels.com/photos/13391438/pexels-photo-13391438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    center;
   min-height: 50vh;
   @include space-center(center, row);
 }
@@ -59,34 +60,16 @@ a {
     @include space();
     @include space-center(space-around, row);
   }
-  .logos-wrapper {      @include space();
+  .logos-wrapper {
+    @include space();
     .img-logo {
-
       @include space-center(space-around, row);
     }
   }
 }
-.img-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row !important;
-}
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row !important;
-
-  img {
-    width: 300px;
-    height: 200px;
-  }
-}
 .hooks-wrapper {
   width: 100%;
-  padding: 20px 50px;
-  margin: 10px auto;
+  @include space();
   text-align: center;
   .btn {
     margin: 10px 20px;
@@ -94,6 +77,17 @@ a {
 }
 .dynamic-component {
   width: 70%;
-  margin: 10px auto;
-  padding: 20px auto;
+  @include space();
+}
+.form-wraper {
+  width: 70%;
+  @include space();
+  @include space-center(space-evenly, row);
+  h1 {
+    font-size: 25px;
+    @include space();
+  }
+  img {
+    @include image(300px, 100%);
+  }
 }

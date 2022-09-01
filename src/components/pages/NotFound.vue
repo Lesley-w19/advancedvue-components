@@ -1,24 +1,15 @@
 <template>
-  <main-layout>
-  
-      <h3>Page not Found!!</h3>
-  
-  </main-layout>
+  <div>
+    <h3 class="text-center text-danger text-undeeline">Page not Found!!</h3>
+  </div>
 </template>
 
 <script>
 export default {
   name: "NotFoundPage",
-  components: {
-  
-  },
+  components: {},
 };
 </script>
 <style lang="scss">
-.notfound-wrapper {
-  padding: 20px;
-  h3 {
-    color: red;
-  }
-}
+
 </style>

@@ -10,6 +10,27 @@ $color-white: #fff;
 a {
   text-decoration: none;
 }
+
+@mixin space {
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+@mixin space-center($justifyContent, $direction) {
+  display: flex;
+  align-items: center;
+  justify-content: $justifyContent;
+  flex-direction: $direction;
+}
+@mixin image {
+  width: 100%;
+  height: 200px;
+}
+
+.hero-wrapper {
+  background: url("https://images.pexels.com/photos/3608056/pexels-photo-3608056.jpeg");
+  min-height: 50vh;
+  @include space-center(center, row);
+}
 .nav-wrapper {
   padding: 0 20px;
   ul {
@@ -32,7 +53,18 @@ a {
   }
 }
 .about-wrapper {
+  @include space();
   text-align: center;
+  .card-wrapper {
+    @include space();
+    @include space-center(space-around, row);
+  }
+  .logos-wrapper {      @include space();
+    .img-logo {
+
+      @include space-center(space-around, row);
+    }
+  }
 }
 .img-logo {
   display: flex;

@@ -4,18 +4,17 @@
       {{ title }}
     </h6>
 
-    <div
-      class="logo-wrapper"
-      v-for="(logo, index) in getImages"
-      v-bind:key="index"
-    >
-      <img :src="logo" :alt="index" />
+    <div class="logo-wrapper">
+      <div v-for="(logo, index) in getImages" v-bind:key="index">
+        <img :src="logo" :alt="index" />
+      </div>
     </div>
-
-    <div v-for="(l, index) in list" v-bind:key="index">
-      <ul ref="toolList">
-        <li>{{ l }}</li>
-      </ul>
+    <div class="logo-wrapper">
+      <div v-for="(l, index) in list" v-bind:key="index">
+        <ul ref="toolList">
+          <li>{{ l }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +39,16 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "../../assets/styles.scss";
+<style lang="scss" scoped>
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background: #d45806 !important;
+  img {
+    width: 400px;
+    height: 300px;
+  }
+}
 </style>
